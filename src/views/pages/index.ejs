@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head'); %>
-</head>
-<body class="container">
-
-<header>
-  <%- include('../partials/header'); %>
-</header>
-
-<main>
-  <div class="jumbotron">
-    <h1>This is great</h1>
-    <p>Welcome to templating using EJS</p>
-  </div>
-</main>
-
-<footer>
-  <%- include('../partials/footer'); %>
-</footer>
-
-</body>
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header'); %></header>
+    <div class="panel">
+      <div class="dial">dial</div>
+      <div class="control">
+        <div class="toggle">
+          <label class="switch-wrap">
+            <div class="switch">
+              <input
+                type="checkbox"
+                id="toggle"
+                name="toggle"
+                value="checked"
+                onclick="sendState()"
+              />
+            </div>
+          </label>
+        </div>
+        <div class="slider">
+          <input
+            type="range"
+            min="0"
+            max="1023"
+            value="500"
+            id="Sliding"
+            oninput="sliderEmit()"
+          />
+        </div>
+      </div>
+    </div>
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
 </html>

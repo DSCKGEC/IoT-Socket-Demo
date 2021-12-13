@@ -1,8 +1,30 @@
-<meta charset="UTF-8">
-<title>EJS Is Fun</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+  <%= typeof PageTitle != 'undefined' ? PageTitle : 'IoT Socket Demo' %>
+</title>
 
-<!-- CSS (load bootstrap from a CDN) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="icon" href="/favicon.ico" />
+
+<!-- <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+/> -->
+<link
+  href="https://fonts.googleapis.com/css?family=Comfortaa"
+  rel="stylesheet"
+/>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"
+  integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link rel="stylesheet" href="/css/style.css" />
+<script type="text/javascript" src="/js/script.js"></script>
 <style>
-  body { padding-top:50px; }
+  body {
+    padding-top: 50px;
+  }
 </style>
