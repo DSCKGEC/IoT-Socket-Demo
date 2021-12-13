@@ -1,12 +1,29 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 body {
   font-family: "Comfortaa";
   background-color: #f0efff;
+  transition: background 0.5s ease;
 }
 body * {
+  color: #000000;
   background-color: #f0efff;
+  transition: background 0.5s ease;
 }
-button {
-  font-family: "Comfortaa";
+
+body.dark {
+  background-color: #17222c;
+}
+body.dark * {
+  color: #ffffff;
+  background-color: #17222c;
 }
 /* =====The Layout===== */
 .container {
@@ -57,16 +74,54 @@ header .theme {
 }
 
 .panel .control .toggle {
-    flex: 1;
+  flex: 1;
 }
 .panel .control .slider {
-    flex: 1;
+  flex: 1;
 }
 
 footer {
   flex: 1;
   text-align: center;
-  color: #616e7a;
+}
+footer * {
+  color: #6f7275 !important;
 }
 
 /* =====Button Styling===== */
+
+/* .switch-wrap {
+  cursor: pointer;
+  background: #15273b;
+  padding: 7px;
+  width: 120px;
+  height: 67px;
+  border-radius: 33.5px;
+}
+.switch-wrap input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: 0.2s;
+}
+.switch::after {
+  content: "";
+  border-radius: 50%;
+  background: #ccc;
+  grid-column: 2;
+  transition: background 0.2s;
+}
+
+/* input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+input:checked + .switch::after {
+  background-color: #52cf71;
+} */
