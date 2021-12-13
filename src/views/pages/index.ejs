@@ -6,21 +6,26 @@
   <body class="container">
     <header><%- include('../partials/header'); %></header>
     <div class="panel">
-      <div class="dial">dial</div>
+      <div class="dial">
+        <div class="brightness">
+          <span id="brightness">51%</span>
+        </div>
+      </div>
       <div class="control">
         <div class="toggle">
           <label class="switch-wrap">
-            <div class="switch">
-              <input
+            <!-- <p>Toggle</p> -->
+            <input
                 type="checkbox"
                 id="toggle"
                 name="toggle"
                 value="checked"
               />
-            </div>
+            <div class="switch"></div>
           </label>
         </div>
         <div class="slider">
+          <p>Brightness</p>
           <input
             type="range"
             min="0"
