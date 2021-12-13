@@ -16,6 +16,8 @@ window.onload = () => {
     document.body.classList.toggle("dark");
     localStorage.setItem("isDark", themeSwitch.checked);
   });
+  socket.on("toggle", data => { toggle.checked = data });
+  socket.on("slider", data => { slider.value = data });
   //control toggle event listener
   toggle.addEventListener("change", () => {
     socket.emit("toggle", toggle.checked);
