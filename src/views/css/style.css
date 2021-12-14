@@ -14,7 +14,6 @@ body {
 }
 
 body * {
-  transition: box-shadow 0.2s ease;
   color: #3e4c5a;
 }
 
@@ -34,16 +33,14 @@ body.dark * {
 }
 
 header {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   flex: 3;
   display: flex;
 }
 header .text {
   margin: auto;
-  padding: 0 5vw;
   flex: 7;
-  /* comment the line below */
-  /* background-color: #6f6d81; */
 }
 header .theme {
   margin: auto;
@@ -59,8 +56,7 @@ header .theme {
   margin: 0 5vw;
   box-shadow: inset 8px 8px 8px #c0bfcc, inset -8px -8px 8px #ffffff;
   justify-content: center;
-  /* comment the line below */
-  /* background-color: #6f6d81; */
+  transition: box-shadow 0.2s ease;
 }
 
 body.dark .panel {
@@ -130,15 +126,26 @@ footer * {
 
 /* =====Button Styling===== */
 .switch-wrap {
+  margin: auto;
+  position: relative;
   display: block;
   cursor: pointer;
   width: 4rem;
   height: 2rem;
   border-radius: 30rem;
-  box-shadow: inset 6px 6px 6px #cecece, inset -6px -6px 6px #f2f2f2;
+  box-shadow: inset 5px 5px 7px #b5b5b5, inset -5px -5px 7px #ffffff;
 }
 body.dark .switch-wrap {
   box-shadow: inset 6px 6px 3px #131c24, inset -6px -6px 3px #1b2834;
+}
+.toggle .switch-wrap::before {
+  content: "ON OFF";
+  font-size: 70%;
+  width: 4rem;
+  height: 1rem;
+  transform: translate(-1.98rem, 0.7rem);
+  position: absolute;
+  z-index: -1;
 }
 .switch-wrap input {
   position: absolute;
@@ -150,30 +157,128 @@ body.dark .switch-wrap {
   height: 100%;
   display: grid;
   grid-template-columns: 0fr 1fr 1fr;
-  transition: 0.2s;
-}
-.switch::after {
-  content: "";
-  border-radius: 50%;
-  background-color: #1c2a36;
-  background-image: url("../assets/Icon\ feather-moon.svg");
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center;
-  grid-column: 2;
-  transition: background 0.2s;
+  transition: all 100ms linear;
 }
 
 input:checked + .switch {
   grid-template-columns: 1fr 1fr 0fr;
 }
-input:checked + .switch::after {
+
+.switch::after {
+  content: "";
+  border-radius: 50%;
+  grid-column: 2;
+  transition: background 0.2s;
+  box-shadow: 5px 5px 11px #989898, -5px -5px 11px #ffffff;
+}
+body.dark .switch::after {
+  box-shadow: 5px 5px 10px #141d26, -5px -5px 10px #1a2732;
+}
+
+header .switch::after {
+  background-color: #1c2a36;
+  background-image: url("../assets/Icon\ feather-moon.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header input:checked + .switch::after {
   background-color: #f0efff;
   background-image: url("../assets/Icon\ feather-sun.svg");
 }
 
+.toggle .switch::after {
+  background: linear-gradient(145deg, #ffffff, #d8d7e6);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body.dark .toggle .switch::after {
+  background: linear-gradient(145deg, #151f28, #19242f);
+}
+
+/* .toggle input:checked + .switch::after {
+  background-color: #7c29fb;
+} */
+
+/* =====Slider Styling===== */
+/* #slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+#slider::-webkit-slider-thumb,
+::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 0;
+  background: #f0efff;
+  cursor: pointer;
+  background: linear-gradient(145deg, #d8d7e6, #ffffff);
+  box-shadow: 6px 6px 12px #cac9d6, -6px -6px 12px #ffffff;
+}
+
+body.dark #slider::-webkit-slider-thumb,
+body.dark #slider::-moz-range-thumb {
+  background: #17222c;
+  box-shadow: 5px 5px 10px #141d26, -5px -5px 10px #1a2732;
+}
+
+/* #slider::-webkit-slider-runnable-track, #slider::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: red;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+} */
+
+/* #slider {
+  -webkit-appearance: none;
+  background-color: #f0efff;
+  border-radius: 1rem;
+  height: 1.8rem;
+  box-shadow: inset 5px 5px 7px #b5b5b5, inset -5px -5px 7px #ffffff;
+}
+body.dark #slider {
+  background-color: #17222c;
+  box-shadow: inset 6px 6px 3px #131c24, inset -6px -6px 3px #1b2834;
+} */
+#slider {
+  -webkit-appearance: none;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#slider:hover {
+  opacity: 1;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
 /* =====Responsiveness===== */
 @media only screen and (min-width: 680px) {
+  /* header .text {
+    flex: 7;
+  } */
   .panel {
     flex-direction: row;
   }
