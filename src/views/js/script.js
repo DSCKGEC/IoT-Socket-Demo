@@ -1,7 +1,6 @@
-const port = 2053;
 let Loaded = false;
 let isLight = localStorage.getItem("isLight") === "true" ? true : false;
-var socket = io(`http://localhost:${port}`);
+var socket = io(window.location.host);
 console.log(socket);
 
 window.onload = () => {

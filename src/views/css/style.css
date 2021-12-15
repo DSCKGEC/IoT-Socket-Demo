@@ -276,9 +276,6 @@ body.dark #slider {
 
 /* =====Responsiveness===== */
 @media only screen and (min-width: 680px) {
-  /* header .text {
-    flex: 7;
-  } */
   .panel {
     flex-direction: row;
   }

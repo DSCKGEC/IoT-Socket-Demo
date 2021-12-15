@@ -28,12 +28,12 @@ app.get("*", homeController.Render404);
 // Listener
 try {
   //http server
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, () => {
     console.log(`Listening at port: ${PORT}`);
     console.log(`Head on to: http://localhost:${PORT}`);
   });
   //socket server
-  const io = socketio(SOCK_PORT, {
+  const io = socketio(server, {
     cors: {
       origin: "*",
     },
