@@ -9,7 +9,6 @@ const homeController = require("./controllers/root.controller");
 
 // Globals
 const PORT = Number(process.env.PORT || 3000);
-const SOCK_PORT = Number(process.env.SOCK_PORT || 2053);
 let clients = []; //we aren't using any database, so storing the clients here
 
 // Config for express app
@@ -46,11 +45,11 @@ try {
       clients = clients.filter( val => { return val != socket.id });  //remove the id
     });
     socket.on("toggle", (data) => {
-      console.log(data);
+      // console.log(data);
       socket.broadcast.emit("toggle", data);
     });
     socket.on("slider", (data) => {
-      console.log(data);
+      // console.log(data);
       socket.broadcast.emit("slider", data);
     });
     // var i = false;
