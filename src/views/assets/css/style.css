@@ -177,7 +177,7 @@ body.dark .switch::after {
 
 header .switch::after {
   background-color: #1c2a36;
-  background-image: url("../assets/Icon\ feather-moon.svg");
+  background-image: url("/Icon\ feather-moon.svg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
@@ -185,7 +185,7 @@ header .switch::after {
 
 header input:checked + .switch::after {
   background-color: #f0efff;
-  background-image: url("../assets/Icon\ feather-sun.svg");
+  background-image: url("/Icon\ feather-sun.svg");
 }
 
 .toggle .switch::after {

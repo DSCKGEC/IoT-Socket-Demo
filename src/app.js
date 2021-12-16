@@ -14,7 +14,7 @@ let clients = []; //we aren't using any database, so storing the clients here
 // Config for express app
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views")); //set path for the views
-app.use(express.static(__dirname + "/views"));
+app.use(express.static(__dirname + "/views/assets"));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
