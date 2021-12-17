@@ -21,6 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 
 //Routes
 app.get("/", homeController.RenderHome);
+app.get("/clients", async(req, res)=>{
+  res.send(clients);
+});
 // 404 page
 app.get("*", homeController.Render404);
 
