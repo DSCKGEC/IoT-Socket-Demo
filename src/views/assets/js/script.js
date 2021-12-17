@@ -1,5 +1,9 @@
 let Loaded = false;
-let isLight = localStorage.getItem("isLight") === "true" ? true : false;
+let isLight = localStorage.getItem("isLight");
+if (!isLight)
+  isLight = true;
+else
+  isLight = isLight === "true" ? true : false;
 var socket = io(window.location.host);
 console.log(socket);
 
@@ -8,10 +12,11 @@ window.onload = () => {
   const toggle = document.getElementById("toggle");
   const slider = document.getElementById("slider");
   const brightness = document.getElementById("brightness");
+  document.body.classList.toggle("dark", !isLight);
   updateBrightness(brightness, slider.value, toggle.checked);
   // local theme loader script
   themeSwitch.checked = isLight;
-  document.body.classList.toggle("dark", !isLight);
+  
   //theme change event listener
   themeSwitch.addEventListener("change", () => {
     document.body.classList.toggle("dark");

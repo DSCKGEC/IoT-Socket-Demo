@@ -158,6 +158,7 @@ body.dark .switch-wrap {
   display: grid;
   grid-template-columns: 0fr 1fr 1fr;
   transition: all 100ms linear;
+  -webkit-transition:  all 100ms linear;
 }
 
 input:checked + .switch {
@@ -177,7 +178,7 @@ body.dark .switch::after {
 
 header .switch::after {
   background-color: #1c2a36;
-  background-image: url("/Icon\ feather-moon.svg");
+  background-image: url("/feather-moon.svg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
@@ -185,7 +186,7 @@ header .switch::after {
 
 header input:checked + .switch::after {
   background-color: #f0efff;
-  background-image: url("/Icon\ feather-sun.svg");
+  background-image: url("/feather-sun.svg");
 }
 
 .toggle .switch::after {
@@ -197,10 +198,6 @@ header input:checked + .switch::after {
 body.dark .toggle .switch::after {
   background: linear-gradient(145deg, #151f28, #19242f);
 }
-
-/* .toggle input:checked + .switch::after {
-  background-color: #7c29fb;
-} */
 
 /* =====Slider Styling===== */
 /* #slider::-webkit-slider-thumb {
