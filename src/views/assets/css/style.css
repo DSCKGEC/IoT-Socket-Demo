@@ -115,6 +115,7 @@ body.dark .panel .dial .brightness #brightness {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 4fr 1fr;
+  padding: 1em;
 }
 .panel .control .toggle > div,
 .panel .control .toggle .switch-wrap {
@@ -128,7 +129,7 @@ body.dark .panel .dial .brightness #brightness {
 .panel .control .slider {
   flex: 1;
   margin: 0;
-  padding: 0;
+  padding: 1em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 4fr;
