@@ -2,15 +2,14 @@
 This is a demo IoT project based on socket-io and express under DSC KGEC 
 
 ## **Contents :**
-2. Description
-3. Installing
-4. Project Images
-5. Languages Used
-6. Connect With Me
+2. [Description](#description)
+3. [Installing](#installing)
+5. [Languages Used](#languages-used)
+4. [Project Images](#project-images)
+6. [Contribution](#contribution)
 
 ## **Description :**
-
-
+This is a demo IoT project based on socket-io and express under DSC KGEC
 ### **What is Socket IO?**
 
 [Socket.io](https://socket.io) is a Javascript networking library that runs server-side on Node.js and in the browser. It abstracts away websockets and other communication schemes, depending upon browser capabilities. It also includes convenient features such as broadcasts and multicasts, which are beyond the features of plain websockets.

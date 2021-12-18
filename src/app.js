@@ -5,7 +5,7 @@ const socketio = require("socket.io");
 const { instrument } = require("@socket.io/admin-ui");
 const cors = require("cors");
 const path = require("path");
-const homeController = require("./controllers/root.controller");
+const homeRoutes = require("./routes/main.routes")
 
 // Globals
 const PORT = Number(process.env.PORT || 3000);
@@ -19,13 +19,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Routes
-app.get("/", homeController.RenderHome);
+//debugging route
 app.get("/clients", async(req, res)=>{
   res.send(clients);
 });
-// 404 page
-app.get("*", homeController.Render404);
+//Routes
+app.use("/", homeRoutes);
+
 
 // Listener
 try {
