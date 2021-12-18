@@ -109,26 +109,39 @@ body.dark .panel .dial .brightness {
 body.dark .panel .dial .brightness #brightness {
   color: #aeafb0;
 }
-
+/* ===== Control panel grid =====*/
 .panel .control .toggle {
   flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr;
 }
-.panel .control .toggle > div {
+.panel .control .toggle > div,
+.panel .control .toggle .switch-wrap {
+  grid-row-start: 2;
   margin: auto;
+}
+.panel .control .toggle .switch-wrap {
+  margin-left: 0;
 }
 
 .panel .control .slider {
   flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 4fr;
 }
 
-.panel .control .slider div {
-  flex: 2;
+.panel .control .slider > div {
+  grid-column-start: 1;
+  margin: auto;
 }
-
+.panel .control .slider #slider {
+  grid-column-end: -1;
+  width: 80%;
+}
 
 footer {
   flex: 1;
@@ -217,12 +230,11 @@ body.dark .toggle .switch::after {
 #slider {
   -webkit-appearance: none;
   height: 2.5em;
-  width: 50%;
+  min-width: 6em; /*for usability*/
   background: #f0efff;
   border-radius: 1.25em;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   box-shadow: inset 5px 5px 8px #bcbcbc, inset -5px -5px 8px #ffffff;
 }
