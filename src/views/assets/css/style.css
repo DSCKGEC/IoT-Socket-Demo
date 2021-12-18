@@ -25,6 +25,7 @@ body.dark * {
 }
 /* =====The Layout===== */
 .container {
+  min-width: 232px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -53,7 +54,7 @@ header .theme {
   display: flex;
   flex-direction: column;
   border-radius: 5vw;
-  padding: 5vw;
+  
   margin: 0 5vw;
   box-shadow: inset 8px 8px 8px #c0bfcc, inset -8px -8px 8px #ffffff;
   justify-content: center;
@@ -115,13 +116,14 @@ body.dark .panel .dial .brightness #brightness {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 4fr 1fr;
-  padding: 1em;
+  grid-template-rows: 1fr 1fr;
+  padding: 1em 0;
 }
 .panel .control .toggle > div,
 .panel .control .toggle .switch-wrap {
   grid-row-start: 2;
   margin: auto;
+  margin-right: 0.2rem;
 }
 .panel .control .toggle .switch-wrap {
   margin-left: 0;
@@ -130,15 +132,16 @@ body.dark .panel .dial .brightness #brightness {
 .panel .control .slider {
   flex: 1;
   margin: 0;
-  padding: 1em;
+  padding: 1em 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .panel .control .slider > div {
   grid-column-start: 1;
   margin: auto;
+  margin-right: 0.2rem;
 }
 .panel .control .slider #slider {
   grid-column-end: -1;
@@ -286,11 +289,15 @@ body.dark #slider::-moz-range-thumb {
 @media only screen and (min-width: 560px) {
   .panel {
     flex-direction: row;
+    padding: 5vw;
   }
   .panel .dial {
     order: 2;
   }
   .panel .control .toggle {
-    grid-template-rows: 1fr;
+    grid-template-rows: 4fr 1fr;
+  }
+  .panel .control .slider {
+    grid-template-rows: 1fr 4fr;
   }
 }
