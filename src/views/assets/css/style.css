@@ -283,11 +283,14 @@ body.dark #slider::-moz-range-thumb {
 }
 
 /* =====Responsiveness===== */
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 560px) {
   .panel {
     flex-direction: row;
   }
   .panel .dial {
     order: 2;
+  }
+  .panel .control .toggle {
+    grid-template-rows: 1fr;
   }
 }
