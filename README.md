@@ -62,9 +62,7 @@ For the Firmware source (for NodeMCU), visit [Socket-IoT-Demo-Firmware](https://
 
 ![Desktop-Dark](https://user-images.githubusercontent.com/55695557/146641432-ce02d97d-2c7b-4421-8b44-54d1f8faa356.png)
 
-![Phone-Light](https://user-images.githubusercontent.com/55695557/146641529-d1195c9f-0781-4115-aa32-5a9695b08349.png)
-
-![Phone-Dark](https://user-images.githubusercontent.com/55695557/146641592-f2832466-f416-44e5-8e3c-75b3bdebb8c2.png)
+<img alt="Phone-Light" src="https://user-images.githubusercontent.com/55695557/146641529-d1195c9f-0781-4115-aa32-5a9695b08349.png" width="200px"/> <img alt="Phone-Dark" src="https://user-images.githubusercontent.com/55695557/146641592-f2832466-f416-44e5-8e3c-75b3bdebb8c2.png" width="202px"/>
 
 ## **Contribution**
 This is a concept for beginners starting with IoT. Feel free to fork, clone, create issues and/or make PRs. We will be more than happy to receive your contributions.
