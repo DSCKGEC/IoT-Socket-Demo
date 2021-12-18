@@ -2,11 +2,11 @@
 This is a demo IoT project based on socket-io and express under DSC KGEC 
 
 ## **Contents**
-2. [Description](#description)
-3. [Installing](#installing)
-5. [Languages Used](#languages-used)
-4. [Project Images](#project-images)
-6. [Contribution](#contribution)
+1. [Description](#description)
+0. [Installing](#installing)
+0. [Languages Used](#languages-used)
+0. [Project Images](#project-images)
+0. [Contribution](#contribution)
 
 ## **Description**
 This is a demo IoT project based on socket-io and express under DSC KGEC
