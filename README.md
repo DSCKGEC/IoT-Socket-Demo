@@ -1,14 +1,14 @@
 # **IoT-Socket-Demo**
 This is a demo IoT project based on socket-io and express under DSC KGEC 
 
-## **Contents :**
+## **Contents**
 2. [Description](#description)
 3. [Installing](#installing)
 5. [Languages Used](#languages-used)
 4. [Project Images](#project-images)
 6. [Contribution](#contribution)
 
-## **Description :**
+## **Description**
 This is a demo IoT project based on socket-io and express under DSC KGEC
 ### **What is Socket IO?**
 
@@ -35,7 +35,7 @@ For the Firmware source (for NodeMCU), visit [Socket-IoT-Demo-Firmware](https://
 
 <br>
 
-## **Installing :**
+## **Installing**
 
 ### Softwares needed
 
@@ -48,19 +48,23 @@ For the Firmware source (for NodeMCU), visit [Socket-IoT-Demo-Firmware](https://
 
 <br>
 
-## **Languages Used :**
+## **Languages Used**
 
 -  <img align="left" alt="JavaScript" width="60px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
 <br>
 <br>
 
 
-## **Project Images :**
+## **Project Images**
 <br>
 
-![Web](https://user-images.githubusercontent.com/55695557/146581912-aa87f471-4d50-42a9-ba82-6d1702a733cc.png)
+![Desktop-Light](https://user-images.githubusercontent.com/55695557/146641429-c0525c66-fa95-4ac1-96ba-eebc11199260.png)
 
-![App](https://user-images.githubusercontent.com/55695557/146581918-c7320916-9395-4a25-8dac-1de4e65d8b6a.png)
+![Desktop-Dark](https://user-images.githubusercontent.com/55695557/146641432-ce02d97d-2c7b-4421-8b44-54d1f8faa356.png)
 
-## **Contribution :**
+![Phone-Light](https://user-images.githubusercontent.com/55695557/146641529-d1195c9f-0781-4115-aa32-5a9695b08349.png)
+
+![Phone-Dark](https://user-images.githubusercontent.com/55695557/146641592-f2832466-f416-44e5-8e3c-75b3bdebb8c2.png)
+
+## **Contribution**
 This is a concept for beginners starting with IoT. Feel free to fork, clone, create issues and/or make PRs. We will be more than happy to receive your contributions.
