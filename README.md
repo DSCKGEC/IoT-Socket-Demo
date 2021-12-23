@@ -46,6 +46,13 @@ For the Firmware source (for NodeMCU), visit [Socket-IoT-Demo-Firmware](https://
 - [Express](https://expressjs.com/)
 - [Socket.io](https://socket.io)
 
+### Socket Admin Dashboard
+Go to this URL: https://admin.socket.io and put *```iot-socket.herokuapp.com/admin```* in the Server URL.
+Note that the domain ```iot-socket.herokuapp.com``` is just for the demonstration, if you are running this project locally, replace that URL with ```localhost:PORT``` where ```PORT``` is the same PORT that your server is running on.
+It should look something like this:
+
+![image](https://user-images.githubusercontent.com/55695557/147200658-15f254f5-6a81-4936-8862-3bdfbb7a395d.png)
+
 <br>
 
 ## **Languages Used**
